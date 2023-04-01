@@ -5,8 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universal Selector</title>
+    <style>
+        /* Menargetkan seluruh tipe elemen */
+        * {
+            color: green;
+        }
+
+        /* Menargetkan selutuh tipe elemen yang mengandung nilai "en" pada atribut lang */
+        *[lang^=en] {
+            font-style: italic;
+        }
+
+        /* Menargetkan seluruh tipe elemen yang memiliki nilai "warning" pada attribut class */
+        *.warning {
+            color: red;
+        }
+
+        /* Menargetkan seluruh tipe elemen yang memiliki nilai "content" pada atribut id */
+        *#content {
+            border: 1px solid blue;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-    
+    <p>Ini merupakan paragraf biasa atau tidak menerapkan atribut apapun. Maka teks pada paragraf ini akan berwarna hidup</p>
+    <p lang="en-us">This is an English paragraph contains en-us value of lang attribute, so this text will be green and italic.</p>
+
+    <h1>Ini merupakan sebuah header biasa</h1>
+    <h1 lang="en-us">This is an English Header</h1>
+
+    <p class="warning">Perhatikan paragraf ini! Paragraf ini merupakan yang memiliki kelas bernilai warning, sehingga teks dari paragraf ini akan berwarna merah</p>
+
+    <div id="content">
+        <p>Ini merupakan sebuah teks di dalam sebuah div yang memiliki id bernilai "containt", seharusnya paragraf ini dibungkus dalam border yang memmiliki padding</p>
+    </div>
 </body>
 </html>
