@@ -7,16 +7,31 @@
         <title>Adjacent - General Sibling Selector</title>
         <style>
             /* Rule akan diterapkan pada elemen paragraf yang berada tepat setelah elemen img */
-            img + p {
+            /* img + p {
+                color: green;
+            } */
+
+            /* Rule akan diterapkan pada elemen paragraf yang berada tepat setelah elemen img */
+            img ~ p {
                 color: green;
             }
         </style>
     </head>
     <body>
-        <p>Ini merupakan paragraf pertama. Rule styling tidak akan diterapkan pada elemen paragraf ini.</p>
+        <!-- Adjacent Sibling Selector -->
+        <!-- <p>Ini merupakan paragraf pertama. Rule styling tidak akan diterapkan pada elemen paragraf ini.</p>
         <img src="https://i.imgur.com/cs2BJzw.jpg" alt="Dicoding Logo" width="400px">
         <p>Ini merupakan paragraf kedua dan ditetapkan setelah elemen gambar. Maka paragraf ini seharusnya menerapkan rule dengan menampilkan teks berwarna hijau.</p>
-        <p>Ini merupakan paragraf ketiga. Letaknya memeang setelah elemen gambar, namun tidak diletakkan persis setelahnya, sehingga rule tidak akan diterapkan pada elemen ini.</p>
+        <p>Ini merupakan paragraf ketiga. Letaknya memeang setelah elemen gambar, namun tidak diletakkan persis setelahnya, sehingga rule tidak akan diterapkan pada elemen ini.</p> -->
         
+
+        <!-- General Sibling Selector -->
+        <p>Ini merupakan paragraf pertama. Rule styling tidak akan deterapkan pada elemen paragraf ini.</p>
+        <img src="https://i.imgur.com/cs2BJzw.jpg" alt="Dicoding Logo" width="400px">
+        <p>Ini merupakan paragraf kedua dan ditetapkan setelah elemen gambar. Maka paragraf ini menerapkan rule dengan menampilkan teks berwarna hijau</p>
+        <div>
+            <p>Ini merupakan pargraf ketida, setelah elemen gambar, namun paragraf ini dibungku di dalam div sehingga paragraf ini tidak menerapkan rule styling karena tidak memiliki induk yangs sama.</p>
+        </div>
+        <p>Ini merupakan paragraf empat. Letaknya memang setelah elem gambar dan memiliki induk yang sama seperti elemen gambar, sehinngga elemen ini akan menerapkan rule dengan berwarna hijau</p>
     </body>
 </html>
