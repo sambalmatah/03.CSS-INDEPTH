@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pseudo Selector</title>
     <style>
+        /* Psuedo Class */
+        
         /* rule akan diterapkan pada sebuah tautan yang belum pernah dikunjungi */
         a:link {
             color: red;
@@ -20,9 +22,35 @@
         a:hover {
             color: pink;
         }
+
+
+        /* Psuedo Element */
+
+        blockquote::before ,
+        blockquote::after {
+            content: '"';
+            font-size: 24px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* Rule styling akan diterapkan pada karakter pertama disebuah paragraf */
+
+        p::first-letter {
+            font-size: 32px;
+            font-weight: bold;
+            color: saddlebrown;
+        }
     </style>
 </head>
 <body>
+    <!-- Pseudo Class -->
     <a href="https://www.google.com">Kunjungi halaman google</a>
+
+    
+    <!-- Pseudo Element -->
+    <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maxime eos assumenda debitis commodi inventore nobis voluptates sapiente vel quam!</blockquote>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, molestias nulla dolorem vero rem cupiditate adipisci alias, exercitationem ut magni ipsum doloribus, nam odio vitae?</p>
 </body>
 </html>
