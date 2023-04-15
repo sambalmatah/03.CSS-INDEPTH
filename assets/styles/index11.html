@@ -37,6 +37,19 @@
             background-color: lightgreen;
             overflow: auto; /* value dapat bernilai: visible, hidden, scroll, auto */
         }
+
+        .mycontent {
+            height: 200px;
+            width: 200px;
+            background-color: lightgreen;
+            border: 10px solid cornflowerblue;
+            padding: 20px;
+            box-sizing: content-box;
+        }
+
+        .box {
+            box-sizing: border-box;
+        }
     </style>
 </head>
 <body>
@@ -48,9 +61,20 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates obcaecati veritatis officia, officiis repellat non veniam qui aliquid placeat possimus?</p>
     </div>
 
+    <br>
+
     <div class="konten">
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum quia iusto voluptates doloremque unde, dolores praesentium autem libero. Odio quasi vero officia libero, repellat veniam neque voluptatem nulla vitae.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem excepturi ducimus harum, adipisci repellendus quisquam, incidunt suscipit quasi in, ut vitae sint. Aspernatur, nostrum! Id sunt quas commodi autem a?</p>
     </div>
+
+    <br>
+
+    <div class="mycontent"></div>
+    <p>Elemen menerapkan <code>box-sizing: content-box;</code> ukuran box secara keseluruhan akan menjadi 260px lebar, 260px tinggi; 260 = 200 +20 + 20 + 10 + 10</p>
+    <br>
+
+    <div class="mycontent box"></div>
+    <p>Elemen menerapkan <code>box-sizing: border-box;</code> ukuran box akan tetap 200px lebar, 200px tinggi meskipun menerapkan padding dan border /p>
 </body>
 </html>
