@@ -93,6 +93,12 @@ nav li {
 nav {
     background-color: #00a2c6;
     padding: 5px;
+    position: sticky;
+    top: 0;
+}
+
+header {
+    display: inline;
 }
 
 /* Rule yang dituliskan dalam block @media di bawah akan diterapkan pada device yang dimiliki ukuran viewport di bawah 992px */
